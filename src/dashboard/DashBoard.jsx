@@ -1,19 +1,17 @@
-import React from "react";
+// src/layouts/DashBoard.jsx
+import React from 'react';
+import BarChart from './BarChart';
+import PieChart from './PieChart';
 
-function DashBoard() {
-  return (
-    <div style={{ display: "flex", justifyContent: "center", gap: "20px", marginTop: "50px" }}>
-      <div style={{ width: "200px", padding: "20px", backgroundColor: "#f8f9fa", boxShadow: "0 4px 8px rgba(0,0,0,0.2)", borderRadius: "8px" }}>
-        <h3>Card 1</h3>
-        <p>Test content for Card 1</p>
-      </div>
-      <div style={{ width: "200px", padding: "20px", backgroundColor: "#f8f9fa", boxShadow: "0 4px 8px rgba(0,0,0,0.2)", borderRadius: "8px" }}>
-        <h3>Card 2</h3>
-        <p>Test content for Card 2</p>
-      </div>
-    </div>
-  );
-}
+const DashBoard = () => {
+    return (
+        <div className="layout-page p-4">
+            <div className="chart-container">
+                <BarChart />
+                <PieChart />
+            </div>
+        </div>
+    );
+};
 
 export default DashBoard;
-//  예시
