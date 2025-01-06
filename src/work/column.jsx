@@ -35,7 +35,7 @@ function Column(props) {
                             isDraggingOver={snapshot.isDraggingOver}
                         >
                             {props.tasks.map((task, index) => (
-                                <Task key={task.id} task={task} index={index} />
+                                <Task key={task.id} task={task} index={index} openModal={props.openModal}/>
                             ))}
                             {provided.placeholder}
                         </TaskList>

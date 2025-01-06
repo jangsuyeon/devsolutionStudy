@@ -3,6 +3,7 @@ import initialData from "./initial-data"
 import Column from "./column";
 import { DragDropContext } from "react-beautiful-dnd";
 import styled from "styled-components";
+import WorkAdd from "./WorkAdd";
 
 const Container = styled.div`
     display: flex;
@@ -10,6 +11,21 @@ const Container = styled.div`
 
 function KanbanBoard () {
     const [state, setState] = useState(initialData);
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedTask, setSelectedTask] = useState(null);
+
+    // 모달 열기
+    const openModal = () => {
+        // setSelectedTask(task);
+        setIsModalOpen(true);
+    };
+
+    // 모달 닫기
+    const closeModal = () => {
+        setIsModalOpen(false);
+        // setSelectedTask(null);
+    };
 
     const onDragEnd = (result) => {
         // TODO: reorder our column
@@ -84,9 +100,11 @@ function KanbanBoard () {
                         const column = state.columns[columnId];
                         const tasks = column.taskIds.map((taskId) => state.tasks[taskId]);
             
-                        return <Column key={column.id} column={column} tasks={tasks} />;
+                        return <Column key={column.id} column={column} tasks={tasks} openModal={openModal}/>;
                 })}
             </Container>
+            {/* <button onClick={openModal}>modal Open</button> */}
+            {isModalOpen && <WorkAdd closeModal={closeModal} />}
         </DragDropContext>
     );
 };
