@@ -5,18 +5,15 @@ import "/public/vendor/css/theme-default.css"
 import "/public/vendor/libs/perfect-scrollbar/perfect-scrollbar.css"
 import "/public/vendor/js/menu.js"
 import "/public/css/project/projectList.css"
+import "/public/css/project/projectAdd.css"
 
-import Modal from "./projectAdd"
+import { Offcanvas, Button } from 'react-bootstrap'
 
-function ProjectList(props) {
-    const [modalOpen, setModalOpen] = useState(false);
+function ProjectList() {
+    const [show, setShow] = useState(false);
 
-    const openModal = () => {
-        setModalOpen(true);
-    }
-    const closeModal = () => {
-        setModalOpen(false);
-    }
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     return (
         <>
@@ -289,14 +286,69 @@ function ProjectList(props) {
                                         </div>
 
                                     </div>
-                                </div>
+                                </div>       
                                 
+                                <div className="mb-2">
+                                    <Button variant="primary" onClick={handleShow} className="btn btn-primary">
+                                                    + 프로젝트 추가
+                                                </Button>
+                                    <Offcanvas show={show} onHide={handleClose} placement="end">
+                                        <Offcanvas.Header closeButton>
+                                            <Offcanvas.Title>프로젝트 생성</Offcanvas.Title>
+                                        </Offcanvas.Header>
+                                        <Offcanvas.Body>
+                                            <div>
+                                                <input type="text" placeholder="프로젝트명" className="projectName" />
+                                            </div>
+                                            <div className="mb-3">
+                                                <label>담당자</label>
+                                            </div>
+                                            <div className="mb-3 row">
+                                                <label for="html5-date-input" className="col-md-2 col-form-label">부서</label>
+                                                <div className="col-md-10">
+                                                    <select id="defaultSelect" className="form-select">
+                                                        <option>선택하세요</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div className="mb-3">
+                                                <label>참여자</label>
+                                            </div>
+                                            <div className="mb-3 row">
+                                                <label for="html5-date-input" className="col-md-2 col-form-label">시작일자</label>
+                                                <div className="col-md-10">
+                                                    <input className="form-control" type="date" value="2021-06-18" id="html5-date-input" />
+                                                </div>
+                                            </div>
+                                            <div className="mb-3 row">
+                                                <label for="html5-date-input" className="col-md-2 col-form-label">종료일자</label>
+                                                <div className="col-md-10">
+                                                <input className="form-control" type="date" value="2021-06-18" id="html5-date-input" />
+                                                </div>
+                                            </div>
+                                            <div className="mb-3 row">
+                                                <label for="html5-url-input" className="col-md-2 col-form-label">Git URL</label>
+                                                <div className="col-md-10">
+                                                <input
+                                                    className="form-control"
+                                                    type="url"
+                                                    id="html5-url-input"
+                                                />
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <label>프로젝트 설명</label>
+                                                <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            </div>
+                                        </Offcanvas.Body>
+                                    </Offcanvas>
+                                </div>
+
                                 {/* Table */}
                                 <div className="card">
-                                    <div>
-                                        <button className="btn-project mb-4" 
-                                        onClick={openModal}>+ 프로젝트 생성</button>
-                                    </div>
                                     <div className="table-responsive text-nowrap">
                                         <table className="table">
                                             <thead>
@@ -312,7 +364,8 @@ function ProjectList(props) {
                                             <tbody className="table-border-bottom-0">
                                                 {/* Angular Project */}
                                                 <tr>
-                                                    <td><i className="fab fa-angular fa-lg text-danger me-3"></i> <strong>Angular Project</strong></td>
+                                                    <td><i className="fab fa-angular fa-lg text-danger me-3"></i> <strong>
+                                                        <a href='/project/detail'>Angular Project</a></strong></td>
                                                     <td>Albert Cook</td>
                                                     <td>
                                                     <ul className="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
