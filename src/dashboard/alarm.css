@@ -1,0 +1,80 @@
+/* 컨테이너 스타일 */
+.notification-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.notification-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.notification-controls button {
+    padding: 10px 15px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.notification-controls button:hover {
+    background-color: #45a049;
+}
+
+/* 알림 리스트 스타일 */
+.notification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* 알림 카드 스타일 */
+.notification-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* 카드 타입별 색상 */
+.notification-card.chat {
+    border-left: 5px solid #60a5fa;
+}
+
+.notification-card.project {
+    border-left: 5px solid #f43f5e;
+}
+
+.notification-card.task {
+    border-left: 5px solid #34d399;
+}
+
+/* 알림 헤더 스타일 */
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.notification-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.notification-date {
+    font-size: 12px;
+    color: #888;
+}
+
+/* 알림 메시지 스타일 */
+.notification-message {
+    font-size: 14px;
+    color: #555;
+}

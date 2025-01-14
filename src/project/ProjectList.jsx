@@ -6,7 +6,7 @@ import "/public/vendor/libs/perfect-scrollbar/perfect-scrollbar.css"
 import "/public/vendor/js/menu.js"
 import "/public/css/project/projectList.css"
 
-import Modal from "./projectAdd"
+import Modal from "./ProjectAdd"
 
 function ProjectList(props) {
     const [modalOpen, setModalOpen] = useState(false);

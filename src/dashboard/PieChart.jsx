@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
@@ -30,9 +29,10 @@ const PieChart = () => {
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false, 
     plugins: {
       legend: {
-        position: 'right', // 범례 위치
+        position: 'right', // 오른쪽에 위치
       },
       tooltip: {
         callbacks: {
@@ -46,8 +46,7 @@ const PieChart = () => {
   };
 
   return (
-    <div style={{ width: '500px', height: '500px', margin: '0 auto' }}> {/* 차트 컨테이너 크기 */}
-      <h3 style={{ textAlign: 'center' }}>프로젝트 별 원형 그래프</h3>
+    <div style={{ width: '100%', height: '100%', padding: '10px' }}>
       <Pie data={data} options={options} />
     </div>
   );
