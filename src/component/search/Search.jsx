@@ -1,4 +1,5 @@
 import React from 'react';
+import NotificationIcon from '../../alarm/Notification';
 
 const Search = () => {
     return (
@@ -29,15 +30,7 @@ const Search = () => {
 
                     <ul className="navbar-nav flex-row align-items-center ms-auto">
                         <li className="nav-item lh-1 me-3">
-                            <a
-                                className="github-button"
-                                href="https://github.com/themeselection/sneat-html-admin-template-free"
-                                data-icon="octicon-star"
-                                data-size="large"
-                                data-show-count="true"
-                                aria-label="Star themeselection/sneat-html-admin-template-free on GitHub"
-                            >Star
-                            </a>
+                        <NotificationIcon />
                         </li>
 
                         {/* User */}

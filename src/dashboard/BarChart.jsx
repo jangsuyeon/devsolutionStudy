@@ -61,7 +61,7 @@ const BarChart = () => {
     };
 
     return (
-        <div style={{ width: '100%', height: '350px' }}> {/* 차트 크기 조정 */}
+        <div style={{ width: '100%', height: '550px' }}> {/* 차트 크기 조정 */}
             <Chart type="bar" data={data} options={options} />
         </div>
     );

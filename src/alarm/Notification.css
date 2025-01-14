@@ -1,0 +1,112 @@
+/* 전체 컨테이너 */
+.notification-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* 알림 버튼 */
+.notification-button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 24px;
+    color: #ff9800;
+    /* 알림 아이콘 색상 */
+    width: auto;
+    /* 버튼 폭 제거 */
+    height: auto;
+    /* 버튼 높이 제거 */
+}
+
+/* 알림 아이콘 */
+.notification-icon {
+    font-size: 28px;
+    color: #ffa726;
+    /* 좀 더 밝은 오렌지 */
+    margin: 0;
+    /* 여백 제거 */
+}
+
+/* 숫자 뱃지 */
+.notification-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #f44336;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 드롭다운 */
+.notification-dropdown {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.notification-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+.notification-text p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.notification-text small {
+    font-size: 12px;
+    color: #888;
+}
+
+.notification-remove {
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #f44336;
+    cursor: pointer;
+}
+
+.close-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #f5f5f5;
+    border: none;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    background-color: #e0e0e0;
+}
+
+.no-notifications {
+    text-align: center;
+    padding: 16px;
+    color: #777;
+}
