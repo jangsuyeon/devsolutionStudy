@@ -21,7 +21,7 @@ function Task(props) {
                         {...provided.dragHandleProps}
                         ref={provided.innerRef}
                         isDragging={snapshot.isDragging}
-                        onClick={() => props.openModal()}
+                        onClick={() => props.openModal(props.task)}
                         // data-bs-toggle="modal"
                         // data-bs-target="#basicModal"
                     >

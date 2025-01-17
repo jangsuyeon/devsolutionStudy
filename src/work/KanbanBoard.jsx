@@ -3,7 +3,7 @@ import initialData from "./initial-data"
 import Column from "./column";
 import { DragDropContext } from "react-beautiful-dnd";
 import styled from "styled-components";
-import WorkAdd from "./WorkAdd";
+import WorkUpdate from "./WorkUpdate";
 
 const Container = styled.div`
     display: flex;
@@ -16,15 +16,15 @@ function KanbanBoard () {
     const [selectedTask, setSelectedTask] = useState(null);
 
     // 모달 열기
-    const openModal = () => {
-        // setSelectedTask(task);
+    const openModal = (task) => {
+        setSelectedTask(task);
         setIsModalOpen(true);
     };
 
     // 모달 닫기
     const closeModal = () => {
         setIsModalOpen(false);
-        // setSelectedTask(null);
+        setSelectedTask(null);
     };
 
     const onDragEnd = (result) => {
@@ -104,7 +104,8 @@ function KanbanBoard () {
                 })}
             </Container>
             {/* <button onClick={openModal}>modal Open</button> */}
-            {isModalOpen && <WorkAdd closeModal={closeModal} />}
+            {isModalOpen && <WorkUpdate closeModal={closeModal} task={selectedTask} />}
+            {/* {isModalOpen && <WorkAdd closeModal={closeModal} />} */}
         </DragDropContext>
     );
 };
