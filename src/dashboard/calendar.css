@@ -15,11 +15,9 @@
     /* 화면 전체를 채우도록 설정 */
 }
 
+/* 캘린더 컨테이너 내부에서 버튼 배치 */
 .calendar-container {
-    flex-grow: 1;
-    /* 남은 공간을 모두 채움 */
-    overflow-y: auto;
-    /* 스크롤 허용 */
+    position: relative; /* 버튼의 기준점 */
 }
 
 /* 제목 스타일 */
@@ -35,3 +33,102 @@
     color: #555;
   }
   
+  
+/* 일정 추가 버튼을 캘린더 내부에 배치 */
+.add-event-button {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    background-color: #3b82f6;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%; /* 동그란 버튼 */
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.add-event-button:hover {
+    background-color: #2563eb;
+    transform: scale(1.1); /* 마우스 올릴 때 살짝 커지게 */
+}
+
+
+/* 팝업 모달 배경 */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+/* 팝업 창 */
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;  /* 화면 크기에 맞게 자동 조정 */
+    max-width: 450px; /* 최대 너비 제한 (너무 넓어지지 않게) */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 입력 필드 */
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* 팝업 내부 버튼 */
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+/* 버튼 크기 조정 */
+.modal-buttons button {
+    flex: 1;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* 추가 버튼 */
+.modal-buttons button:first-child {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.modal-buttons button:first-child:hover {
+    background-color: #2563eb;
+}
+
+/* 취소 버튼 */
+.cancel-button {
+    background-color: #ef4444;
+    color: white;
+}
+
+.cancel-button:hover {
+    background-color: #dc2626;
+}

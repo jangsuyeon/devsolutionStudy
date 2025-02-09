@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
@@ -6,25 +6,56 @@ import koLocale from '@fullcalendar/core/locales/ko';
 import './calendar.css';
 
 const Calendar = () => {
-    const events = [
-        { id: '1', title: '프론트엔드 구현 완료', start: '2024-12-01', end: '2024-12-03', backgroundColor: '#60a5fa' },
-        { id: '2', title: '백엔드 API 개발', start: '2024-12-04', end: '2024-12-06', backgroundColor: '#34d399' },
-        { id: '3', title: '디자인 검토 회의', start: '2024-12-07', end: '2024-12-07', backgroundColor: '#f43f5e' },
-        { id: '4', title: '프로젝트 코드 리뷰', start: '2024-12-08', end: '2024-12-08', backgroundColor: '#fbbf24' },
-        { id: '5', title: 'QA 테스트 및 버그 수정', start: '2024-12-09', end: '2024-12-11', backgroundColor: '#a78bfa' },
-        { id: '6', title: '배포 준비', start: '2024-12-12', end: '2024-12-13', backgroundColor: '#93c5fd' },
-        { id: '7', title: '파트너사 미팅', start: '2024-12-14', end: '2024-12-14', backgroundColor: '#f472b6' },
-        { id: '8', title: '사용자 피드백 분석', start: '2024-12-15', end: '2024-12-16', backgroundColor: '#86efac' },
-        { id: '9', title: '리팩토링 작업', start: '2024-12-17', end: '2024-12-19', backgroundColor: '#fb923c' },
-        { id: '10', title: '최종 배포 및 발표 준비', start: '2024-12-20', end: '2024-12-22', backgroundColor: '#fde047' },
+    const initialEvents = [
+        { id: '1', title: '프론트엔드 구현 완료', start: '2025-01-01', end: '2025-01-03', backgroundColor: '#60a5fa' },
+        { id: '2', title: '백엔드 API 개발', start: '2025-01-04', end: '2025-01-06', backgroundColor: '#34d399' },
+        { id: '3', title: '디자인 검토 회의', start: '2025-01-07', end: '2025-01-07', backgroundColor: '#f43f5e' },
     ];
+
+    const [events, setEvents] = useState(initialEvents);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedEvent, setSelectedEvent] = useState(null);
+    const [eventData, setEventData] = useState({ title: '', start: '', end: '', backgroundColor: '#60a5fa' });
+
+    const openModal = (event = null) => {
+        if (event) {
+            setSelectedEvent(event);
+            setEventData({ title: event.title, start: event.startStr, end: event.endStr || event.startStr, backgroundColor: event.backgroundColor || '#60a5fa' });
+        } else {
+            setSelectedEvent(null);
+            setEventData({ title: '', start: '', end: '', backgroundColor: '#60a5fa' });
+        }
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => setIsModalOpen(false);
+
+    const addOrUpdateEvent = () => {
+        if (!eventData.title || !eventData.start || !eventData.end) {
+            alert('제목, 시작일, 종료일을 입력하세요.');
+            return;
+        }
+        if (selectedEvent) {
+            setEvents(events.map(evt => evt.id === selectedEvent.id ? { ...evt, ...eventData } : evt));
+        } else {
+            setEvents([...events, { id: String(events.length + 1), ...eventData }]);
+        }
+        closeModal();
+    };
+
+    const deleteEvent = () => {
+        if (selectedEvent) {
+            setEvents(events.filter(evt => evt.id !== selectedEvent.id));
+            closeModal();
+        }
+    };
 
     return (
         <div className="calendar-wrapper">
             <div className="calendar-container">
                 <FullCalendar
                     plugins={[dayGridPlugin, interactionPlugin]}
-                    initialView="dayGridMonth" // 기본 보기를 월별 날짜 보기로 설정
+                    initialView="dayGridMonth"
                     locales={[koLocale]}
                     locale="ko"
                     headerToolbar={{
@@ -37,8 +68,43 @@ const Calendar = () => {
                     selectable={true}
                     height="auto"
                     contentHeight="auto"
+                    eventClick={(info) => openModal(info.event)}
                 />
             </div>
+
+            <button className="add-event-button" onClick={() => openModal()}>
+    +
+</button>
+
+
+            {isModalOpen && (
+                <div className="modal-overlay">
+                    <div className="modal-content">
+                        <h3>{selectedEvent ? '일정 수정' : '새 일정 추가'}</h3>
+                        <input
+                            type="text"
+                            placeholder="일정 제목"
+                            value={eventData.title}
+                            onChange={(e) => setEventData({ ...eventData, title: e.target.value })}
+                        />
+                        <input
+                            type="date"
+                            value={eventData.start}
+                            onChange={(e) => setEventData({ ...eventData, start: e.target.value })}
+                        />
+                        <input
+                            type="date"
+                            value={eventData.end}
+                            onChange={(e) => setEventData({ ...eventData, end: e.target.value })}
+                        />
+                        <div className="modal-buttons">
+                            <button onClick={addOrUpdateEvent}>{selectedEvent ? '수정' : '추가'}</button>
+                            {selectedEvent && <button className="delete-button" onClick={deleteEvent}>삭제</button>}
+                            <button className="cancel-button" onClick={closeModal}>취소</button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
