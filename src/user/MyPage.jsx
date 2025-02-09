@@ -2,7 +2,11 @@ function MyPage({ user }) {
 
     return (
         <>
-            <div style={{padding:"20px"}}>
+            <div style={{
+                padding:"20px",
+                backgroundColor: "white",
+                borderRadius: "10px"
+                }}>
                 <div style={{position:"relative"}}>
                     <h1 style={{textAlign:"center"}}>마이페이지</h1>
                     <button
@@ -60,6 +64,8 @@ function MyPage({ user }) {
                     </table>
                 </div>
                 <button type="button" className="btn btn-primary" style={{marginTop:"10px", float:"right"}}>회원 정보 수정</button>
+                <br />
+                <br />
             </div>
 
         </>

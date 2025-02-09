@@ -2,9 +2,13 @@ function UserApprove({ request }) {
 
     return (
         <>
-            <div style={{padding:"20px"}}>
+            <div style={{
+                padding:"20px",
+                backgroundColor: "white",
+                borderRadius: "10px"
+            }}>
                 <div style={{position:"relative"}}>
-                    <h1 style={{textAlign:"center"}}>회원 권한 관리</h1>
+                    <h3 style={{textAlign:"center"}}>회원 권한 관리</h3>
                     <button
                         type="button"
                         className="btn"
@@ -14,7 +18,13 @@ function UserApprove({ request }) {
                             right:"0"
                         }}>X</button>
                 </div>
-                <div style={{border:"1px solid lightgray", borderRadius:"10px", padding:"20px", marginBottom:"5px"}}>
+                <div style={{
+                    border:"1px solid #F5F5F5", 
+                    borderRadius:"10px", 
+                    padding:"20px", 
+                    marginBottom:"5px",
+                    backgroundColor: "#F5F5F5"
+                }}>
                     <table>
                         <tbody>
                             <tr>
@@ -36,7 +46,7 @@ function UserApprove({ request }) {
                         </tbody>
                     </table>
                 </div>
-                <div style={{border:"1px solid lightgray", borderRadius:"10px", padding:"20px"}}>
+                <div style={{border:"1px solid #F5F5F5", borderRadius:"10px", padding:"20px"}}>
                     <table>
                         <tbody>
                             <tr>

@@ -2,9 +2,13 @@ function UserUpdate({ user }) {
 
     return (
         <>
-            <div style={{padding:"20px"}}>
+            <div style={{
+                padding:"20px",
+                backgroundColor: "white",
+                borderRadius: "10px"
+                }}>
                 <div style={{position:"relative"}}>
-                    <h1 style={{textAlign:"center"}}>회원 정보 수정</h1>
+                    <h3 style={{textAlign:"center"}}>회원 정보 수정</h3>
                     <button
                         type="button"
                         className="btn"
