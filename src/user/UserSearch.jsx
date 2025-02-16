@@ -7,8 +7,16 @@ function UserSearch({ userList }){
                 borderRadius: "10px",
                 padding: "10px"
             }}>
-                <div>
-                    <h3>직원 검색</h3>
+                <div style={{position:"relative"}}>
+                    <h3 style={{textAlign:"center"}}>직원 검색</h3>
+                    <button
+                        type="button"
+                        className="btn"
+                        style={{
+                            position:"absolute",
+                            top:"0",
+                            right:"0"
+                        }}>X</button>
                 </div>
                 <div>
                     <table
@@ -36,7 +44,7 @@ function UserSearch({ userList }){
                         ))}
                     </table>
                 </div>
-                <div>
+                <div style={{display: "flex", justifyContent: "flex-end"}}>
                     <button type="button" className="btn btn-secondary">취소</button>
                 </div>
             </div>

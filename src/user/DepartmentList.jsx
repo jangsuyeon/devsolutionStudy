@@ -8,8 +8,16 @@ function DepartmentList({ departments }) {
                 borderRadius: "10px",
                 padding: "10px"
             }}>
-                <div>
-                    <h3>부서 관리</h3>
+                <div style={{position:"relative"}}>
+                    <h3 style={{textAlign:"center"}}>부서 관리</h3>
+                    <button
+                        type="button"
+                        className="btn"
+                        style={{
+                            position:"absolute",
+                            top:"0",
+                            right:"0"
+                        }}>X</button>
                 </div>
                 <div>
                     <table style={{

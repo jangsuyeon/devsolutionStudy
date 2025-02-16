@@ -5,7 +5,8 @@ function UserApprove({ request }) {
             <div style={{
                 padding:"20px",
                 backgroundColor: "white",
-                borderRadius: "10px"
+                borderRadius: "10px",
+                width: "300px"
             }}>
                 <div style={{position:"relative"}}>
                     <h3 style={{textAlign:"center"}}>회원 권한 관리</h3>
