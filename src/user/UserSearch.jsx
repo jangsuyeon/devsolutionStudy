@@ -18,7 +18,7 @@ function UserSearch({ userList }){
                     }}>
                         <tr>
                             <td>
-                                <select name="searchType" className="form-control" id="searchType">
+                                <select name="searchType" className="form-select" id="searchType">
                                     <option value="name" selected>이름</option>
                                     <option value="position">직책</option>
                                     <option value="email">이메일</option>
