@@ -6,6 +6,7 @@ import "/public/vendor/libs/perfect-scrollbar/perfect-scrollbar.css"
 import "/public/vendor/js/menu.js"
 import "/public/css/project/projectList.css"
 import "/public/css/project/projectAdd.css"
+import "boxicons/css/boxicons.min.css";
 
 import { Offcanvas, Button } from 'react-bootstrap'
 
@@ -20,7 +21,7 @@ function ProjectList() {
             <div className="layout-wrapper">
                 <div className="layout-container layout-content-navbar">
                     {/* Menu */}
-                    <aside id="layout-menu" className="layout-menu menu-vertical menu bg-menu-theme">
+                    {/* <aside id="layout-menu" className="layout-menu menu-vertical menu bg-menu-theme">
                         <div className="app-brand demo">
                             <a href="index.html" className="app-brand-link">
                             <span className="app-brand-logo demo">
@@ -121,7 +122,7 @@ function ProjectList() {
                             </ul>
                             </li>
                         </ul>
-                    </aside>
+                    </aside> */}
 
                     {/* Layout container */}
                     <div className="layout-page ">
@@ -294,11 +295,11 @@ function ProjectList() {
                                                 </Button>
                                     <Offcanvas show={show} onHide={handleClose} placement="end">
                                         <Offcanvas.Header closeButton>
-                                            <Offcanvas.Title>프로젝트 생성</Offcanvas.Title>
+                                            <Offcanvas.Title><b>프로젝트 생성</b></Offcanvas.Title>
                                         </Offcanvas.Header>
                                         <Offcanvas.Body>
                                             <div>
-                                                <input type="text" placeholder="프로젝트명" className="projectName" />
+                                                <input type="text" placeholder="프로젝트명을 입력하세요" className="projectName" />
                                             </div>
                                             <div className="mb-3">
                                                 <label>담당자</label>
