@@ -3,9 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import './notification.css';
 
 const initialNotifications = [
-    { id: 1, type: "업무", message: "A 업무에 배정되었습니다.", date: "2023-01-14", isRead: false },
-    { id: 2, type: "채팅", message: "채팅에 초대되었습니다.", date: "2023-01-13", isRead: false },
-    { id: 3, type: "시스템", message: "B 프로젝트가 완료되었습니다.", date: "2023-01-12", isRead: false },
+    { id: 1, type: "업무", sender: "관리자", message: "A 업무에 배정되었습니다.", date: "2023-01-14", isRead: false },
+    { id: 2, type: "채팅", sender: "김 주임", avatar: "img/avatars/1.png", message: "대리님 여기까지 작업하시면 되세요", date: "2023-01-13", isRead: false },
+    { id: 3, type: "채팅", sender: "이 사원", avatar: "img/avatars/5.png", message: "대리님 고생하셨슴돠", date: "2023-01-13", isRead: false },
+    { id: 4, type: "시스템", sender: "시스템 알림", message: "B 프로젝트가 완료되었습니다.", date: "2023-01-12", isRead: false },
 ];
 
 const NotificationIcon = () => {
@@ -19,12 +20,6 @@ const NotificationIcon = () => {
             Notification.requestPermission();
         }
     }, []);
-
-    const sendWebPushNotification = (message) => {
-        if ("Notification" in window && Notification.permission === "granted") {
-            new Notification("새 알림", { body: message, icon: "🔔" });
-        }
-    };
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
@@ -93,8 +88,11 @@ const NotificationIcon = () => {
                                 className={`notification-item ${notification.isRead ? "read" : "unread"} ${notification.type}`}
                                 onClick={() => handleNotificationClick(notification)}
                             >
+                                {notification.type === "채팅" && (
+                                    <img src={notification.avatar} alt="avatar" className="notification-avatar" style={{ width: '20px', height: '20px', borderRadius: '50%', marginRight: '8px' }} />
+                                )}
                                 <div className="notification-text">
-                                    <span className={`notification-type ${notification.type}`}>{notification.type}</span>
+                                    <span className="notification-sender">{notification.sender}</span>
                                     <p>{notification.message}</p>
                                     <small>{notification.date}</small>
                                 </div>
