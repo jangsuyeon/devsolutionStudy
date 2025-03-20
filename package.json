@@ -13,10 +13,15 @@
     "@nivo/pie": "^0.88.0",
     "boxicons": "^2.1.4",
     "react": "^18.3.1",
+    "react-beautiful-dnd": "^13.1.1",
     "react-codemirror2": "^8.0.0",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
     "react-dom": "^18.3.1",
     "react-modal": "^3.16.1",
-    "react-router-dom": "^7.0.2"
+    "react-router-dom": "^7.0.2",
+    "react-select": "^5.10.1",
+    "styled-components": "^6.1.13"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",

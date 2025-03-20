@@ -8,14 +8,19 @@ import "boxicons/css/boxicons.min.css"
 import "/public/css/project/proejctDetail.css"
 import "/src/project/ProjectChart"
 import ProjectChart from './ProjectChart'
+import ProjectKanban from './projectKanban/ProjectKanban'
+import { Offcanvas, Button } from 'react-bootstrap'
 
 function ProjectDetail() {
-
+    const [show, setShow] = useState(false);
+    
+        const handleClose = () => setShow(false);
+        const handleShow = () => setShow(true);
+        
     return (
         <>
             <div className="layout-wrapper">
                 <div className="layout-container layout-content-navbar">
-                    
                     {/* Layout container */}
                     <div className="layout-page ">
                         {/* Navbar */}
@@ -226,7 +231,7 @@ function ProjectDetail() {
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <td><i className="fab fa-react fa-lg text-info me-3"></i> <strong>코드리뷰</strong></td>
+                                                                <td><i className="fab fa-react fa-lg text-info me-3"></i> <strong>대시보드</strong></td>
                                                                 <td>
                                                                     <ul className="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                                                                         <li
@@ -301,8 +306,8 @@ function ProjectDetail() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="col-md-6 col-lg-4 mb-3">
-                                        <h4>칸반보드</h4>
+                                    <div className="col mb-3">
+                                        <ProjectKanban></ProjectKanban>
                                     </div>
                                 </div>
                             </div>
