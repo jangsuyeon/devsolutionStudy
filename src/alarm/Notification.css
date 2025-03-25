@@ -1,0 +1,203 @@
+/* 전체 컨테이너 */
+.notification-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* 알림 버튼 */
+.notification-button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 24px;
+    color: #ff9800;
+}
+
+/* 알림 아이콘 */
+.notification-icon {
+    font-size: 28px;
+    color: #ffa726;
+}
+
+/* 숫자 뱃지 */
+.notification-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #f44336;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 드롭다운 */
+.notification-dropdown {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* 알림 아이템 */
+.notification-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 14px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+/* 채팅 알람 - 프로필 사진 */
+.notification-avatar {
+    width: 24px;  /* 크기 조정 */
+    height: 24px;
+    border-radius: 50%; /* 원형 */
+    margin-right: 8px; /* 텍스트와 간격 */
+}
+
+/* 알림 텍스트 */
+.notification-text {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.notification-sender {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* 메시지 스타일 */
+.notification-item p {
+    margin: 2px 0;
+    font-size: 12px;
+    color: #333;
+}
+
+/* 날짜 스타일 */
+.notification-text small {
+    font-size: 10px;
+    color: #888;
+}
+
+/* 삭제 버튼 */
+.notification-remove {
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #f44336;
+    cursor: pointer;
+}
+
+/* 닫기 버튼 */
+.close-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #f5f5f5;
+    border: none;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    background-color: #e0e0e0;
+}
+
+/* 알림 없음 */
+.no-notifications {
+    text-align: center;
+    padding: 16px;
+    color: #777;
+}
+
+/* 읽지 않은 알림 */
+.notification-item.unread {
+    background-color: #fff3e0;
+    font-weight: bold;
+}
+
+/* 읽은 알림 */
+.notification-item.read {
+    background-color: #f5f5f5;
+    color: #888;
+}
+
+/* 알림 헤더 */
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.notification-header button {
+    background: none;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    color: #007bff;
+}
+
+.notification-header button:hover {
+    text-decoration: underline;
+}
+
+/* 알림 유형별 스타일 */
+.notification-item.업무 {
+    background-color: #e3f2fd;
+    border-left: 5px solid #2196f3;
+}
+
+.notification-item.채팅 {
+    background-color: #e8f5e9;
+    border-left: 5px solid #4caf50;
+}
+
+.notification-item.시스템 {
+    background-color: #fff3e0;
+    border-left: 5px solid #ff9800;
+}
+
+/* 필터 버튼 스타일 */
+.notification-filter {
+    display: flex;
+    justify-content: space-around;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f5f5f5;
+}
+
+.notification-filter button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+.notification-filter button:hover {
+    background-color: #ddd;
+}
+
+.notification-filter button.active {
+    background-color: #007bff;
+    color: white;
+}
