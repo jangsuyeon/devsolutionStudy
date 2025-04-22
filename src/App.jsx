@@ -5,6 +5,8 @@ import ProjectList from './project/ProjectList'
 import ProjectAdd from './project/projectAdd'
 import ProjectDetail from './project/ProjectDetail'
 
+import Kanban from './work/KanbanBoard';
+
 import CodeReview from './codereview/Codereview'
 import SideMenu from './component/menu/SideMenu'
 
@@ -24,8 +26,11 @@ function App() {
             <Route path='/devsolutionStudy/project' element={<ProjectList />} />
             <Route path='/devsolutionStudy/project/add' element={<ProjectAdd />} />
             <Route path='/devsolutionStudy/codeReview' element={<CodeReview />} />
+            <Route path='/devsolutionStudy/KanbanBoard' element={<Kanban />} />
 
             <Route path='/devsolutionStudy/chatList' element={<ChatList />} />
+            <Route path='/devsolutionStudy/project/detail' element={<ProjectDetail/>} />
+
             <Route path='/devsolutionStudy/project/detail' element={<ProjectDetail/>} />
           </Routes>
         </div>

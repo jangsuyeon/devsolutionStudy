@@ -8,11 +8,11 @@ const Search = () => {
                 className="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
                 id="layout-navbar"
             >
-                <div className="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+                {/* <div className="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
                     <a className="nav-item nav-link px-0 me-xl-4" href="#">
                         <i className="bx bx-menu bx-sm"></i>
                     </a>
-                </div>
+                </div> */}
 
                 <div className="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
                     {/* Search */}
@@ -37,7 +37,7 @@ const Search = () => {
                         <li className="nav-item navbar-dropdown dropdown-user dropdown">
                             <a className="nav-link dropdown-toggle hide-arrow" href="#" data-bs-toggle="dropdown">
                                 <div className="avatar avatar-online">
-                                    <img src="/img/avatars/1.png" alt="Avatar" className="w-px-40 h-auto rounded-circle" />
+                                    <img src='/devsolutionStudy/public/img/avatars/1.png' alt="Avatar" className="w-px-40 h-auto rounded-circle" />
                                 </div>
                             </a>
                             <ul className="dropdown-menu dropdown-menu-end">
@@ -46,7 +46,7 @@ const Search = () => {
                                         <div className="d-flex">
                                             <div className="flex-shrink-0 me-3">
                                                 <div className="avatar avatar-online">
-                                                    <img src="/img/avatars/1.png" alt="Avatar" className="w-px-40 h-auto rounded-circle" />
+                                                    <img src="/devsolutionStudy/public/img/avatars/1.png" alt="Avatar" className="w-px-40 h-auto rounded-circle" />
                                                 </div>
                                             </div>
                                             <div className="flex-grow-1">

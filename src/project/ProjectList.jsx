@@ -96,7 +96,7 @@ function ProjectList() {
                                     <li className="nav-item navbar-dropdown dropdown-user dropdown">
                                         <a className="nav-link dropdown-toggle hide-arrow" href="#" data-bs-toggle="dropdown">
                                             <div className="avatar avatar-online">
-                                            <img src="/img/avatars/1.png" alt="Avatar" className="w-px-40 h-auto rounded-circle" />
+                                            <img src="/devsolutionStudy/public/img/avatars/1.png" alt="Avatar" className="w-px-40 h-auto rounded-circle" />
                                             </div>
                                         </a>
                                         <ul className="dropdown-menu dropdown-menu-end">
@@ -105,7 +105,7 @@ function ProjectList() {
                                                     <div className="d-flex">
                                                     <div className="flex-shrink-0 me-3">
                                                         <div className="avatar avatar-online">
-                                                        <img src="/img/avatars/1.png" alt="Avatar" className="w-px-40 h-auto rounded-circle" />
+                                                        <img src="/devsolutionStudy/public/img/avatars/1.png" alt="Avatar" className="w-px-40 h-auto rounded-circle" />
                                                         </div>
                                                     </div>
                                                     <div className="flex-grow-1">
@@ -314,7 +314,7 @@ function ProjectList() {
                                                         className="avatar avatar-xs pull-up"
                                                         title="Lilian Fuller"
                                                         >
-                                                        <img src="/img/avatars/5.png" alt="Avatar" className="rounded-circle" />
+                                                        <img src="/devsolutionStudy/public/img/avatars/5.png" alt="Avatar" className="rounded-circle" />
                                                         </li>
                                                         <li
                                                         data-bs-toggle="tooltip"
@@ -323,7 +323,7 @@ function ProjectList() {
                                                         className="avatar avatar-xs pull-up"
                                                         title="Sophia Wilkerson"
                                                         >
-                                                        <img src="/img/avatars/6.png" alt="Avatar" className="rounded-circle" />
+                                                        <img src="/devsolutionStudy/public/img/avatars/6.png" alt="Avatar" className="rounded-circle" />
                                                         </li>
                                                         <li
                                                         data-bs-toggle="tooltip"
@@ -332,7 +332,7 @@ function ProjectList() {
                                                         className="avatar avatar-xs pull-up"
                                                         title="Christina Parker"
                                                         >
-                                                        <img src="/img/avatars/7.png" alt="Avatar" className="rounded-circle" />
+                                                        <img src="/devsolutionStudy/public/img/avatars/7.png" alt="Avatar" className="rounded-circle" />
                                                         </li>
                                                     </ul>
                                                     </td>
@@ -367,7 +367,7 @@ function ProjectList() {
                                                         className="avatar avatar-xs pull-up"
                                                         title="Lilian Fuller"
                                                         >
-                                                        <img src="/img/avatars/5.png" alt="Avatar" className="rounded-circle" />
+                                                        <img src="/devsolutionStudy/public/img/avatars/5.png" alt="Avatar" className="rounded-circle" />
                                                         </li>
                                                         <li
                                                         data-bs-toggle="tooltip"
@@ -376,7 +376,7 @@ function ProjectList() {
                                                         className="avatar avatar-xs pull-up"
                                                         title="Sophia Wilkerson"
                                                         >
-                                                        <img src="/img/avatars/6.png" alt="Avatar" className="rounded-circle" />
+                                                        <img src="/devsolutionStudy/public/img/avatars/6.png" alt="Avatar" className="rounded-circle" />
                                                         </li>
                                                         <li
                                                         data-bs-toggle="tooltip"
@@ -385,7 +385,7 @@ function ProjectList() {
                                                         className="avatar avatar-xs pull-up"
                                                         title="Christina Parker"
                                                         >
-                                                        <img src="/img/avatars/7.png" alt="Avatar" className="rounded-circle" />
+                                                        <img src="/devsolutionStudy/public/img/avatars/7.png" alt="Avatar" className="rounded-circle" />
                                                         </li>
                                                     </ul>
                                                     </td>
@@ -420,7 +420,7 @@ function ProjectList() {
                                                         className="avatar avatar-xs pull-up"
                                                         title="Lilian Fuller"
                                                         >
-                                                        <img src="/img/avatars/5.png" alt="Avatar" className="rounded-circle" />
+                                                        <img src="/devsolutionStudy/public/img/avatars/5.png" alt="Avatar" className="rounded-circle" />
                                                         </li>
                                                         <li
                                                         data-bs-toggle="tooltip"
@@ -429,7 +429,7 @@ function ProjectList() {
                                                         className="avatar avatar-xs pull-up"
                                                         title="Sophia Wilkerson"
                                                         >
-                                                        <img src="/img/avatars/6.png" alt="Avatar" className="rounded-circle" />
+                                                        <img src="/devsolutionStudy/public/img/avatars/6.png" alt="Avatar" className="rounded-circle" />
                                                         </li>
                                                         <li
                                                         data-bs-toggle="tooltip"
@@ -438,7 +438,7 @@ function ProjectList() {
                                                         className="avatar avatar-xs pull-up"
                                                         title="Christina Parker"
                                                         >
-                                                        <img src="/img/avatars/7.png" alt="Avatar" className="rounded-circle" />
+                                                        <img src="/devsolutionStudy/public/img/avatars/7.png" alt="Avatar" className="rounded-circle" />
                                                         </li>
                                                     </ul>
                                                     </td>
@@ -475,7 +475,7 @@ function ProjectList() {
                                                         className="avatar avatar-xs pull-up"
                                                         title="Lilian Fuller"
                                                         >
-                                                        <img src="/img/avatars/5.png" alt="Avatar" className="rounded-circle" />
+                                                        <img src="/devsolutionStudy/public/img/avatars/5.png" alt="Avatar" className="rounded-circle" />
                                                         </li>
                                                         <li
                                                         data-bs-toggle="tooltip"
@@ -484,7 +484,7 @@ function ProjectList() {
                                                         className="avatar avatar-xs pull-up"
                                                         title="Sophia Wilkerson"
                                                         >
-                                                        <img src="/img/avatars/6.png" alt="Avatar" className="rounded-circle" />
+                                                        <img src="/devsolutionStudy/public/img/avatars/6.png" alt="Avatar" className="rounded-circle" />
                                                         </li>
                                                         <li
                                                         data-bs-toggle="tooltip"
@@ -493,7 +493,7 @@ function ProjectList() {
                                                         className="avatar avatar-xs pull-up"
                                                         title="Christina Parker"
                                                         >
-                                                        <img src="/img/avatars/7.png" alt="Avatar" className="rounded-circle" />
+                                                        <img src="/devsolutionStudy/public/img/avatars/7.png" alt="Avatar" className="rounded-circle" />
                                                         </li>
                                                     </ul>
                                                     </td>

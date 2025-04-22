@@ -39,7 +39,7 @@ const ProjectTable = () => {
                             <td>
                                 <div className="d-flex align-items-center">
                                     <img
-                                        src="/img/avatars/1.png"
+                                        src="/devsolutionStudy/public/img/avatars/1.png"
                                         alt="Avatar"
                                         className="rounded-circle me-2"
                                         style={{ width: '32px', height: '32px' }}
@@ -75,7 +75,7 @@ const ProjectTable = () => {
                             <td>
                                 <div className="d-flex align-items-center">
                                     <img
-                                        src="/img/avatars/5.png"
+                                        src="/devsolutionStudy/public/img/avatars/5.png"
                                         alt="Avatar"
                                         className="rounded-circle me-2"
                                         style={{ width: '32px', height: '32px' }}
@@ -111,7 +111,7 @@ const ProjectTable = () => {
                             <td>
                                 <div className="d-flex align-items-center">
                                     <img
-                                        src="/img/avatars/6.png"
+                                        src="/devsolutionStudy/public/img/avatars/6.png"
                                         alt="Avatar"
                                         className="rounded-circle me-2"
                                         style={{ width: '32px', height: '32px' }}
@@ -147,7 +147,7 @@ const ProjectTable = () => {
                             <td>
                                 <div className="d-flex align-items-center">
                                     <img
-                                        src="/img/avatars/6.png"
+                                        src="/devsolutionStudy/public/img/avatars/6.png"
                                         alt="Avatar"
                                         className="rounded-circle me-2"
                                         style={{ width: '32px', height: '32px' }}

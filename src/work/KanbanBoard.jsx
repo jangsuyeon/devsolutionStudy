@@ -4,6 +4,7 @@ import Column from "./column";
 import { DragDropContext } from "react-beautiful-dnd";
 import styled from "styled-components";
 import WorkUpdate from "./WorkUpdate";
+import Search from '../component/search/Search';
 
 const Container = styled.div`
     display: flex;
@@ -94,19 +95,29 @@ function KanbanBoard () {
     };
 
     return (
-        <DragDropContext onDragEnd={onDragEnd}>
-            <Container>
-                {state.columnOrder.map((columnId) => {
-                        const column = state.columns[columnId];
-                        const tasks = column.taskIds.map((taskId) => state.tasks[taskId]);
-            
-                        return <Column key={column.id} column={column} tasks={tasks} openModal={openModal}/>;
-                })}
-            </Container>
-            {/* <button onClick={openModal}>modal Open</button> */}
-            {isModalOpen && <WorkUpdate closeModal={closeModal} task={selectedTask} />}
-            {/* {isModalOpen && <WorkAdd closeModal={closeModal} />} */}
-        </DragDropContext>
+        <div className="layout-page">
+            <Search />
+            <div className="content-wrapper">
+                <div className="container-xxl flex-grow-1 container-p-y">
+                    <div className='card'>
+
+                        <DragDropContext onDragEnd={onDragEnd}>
+                            <Container>
+                                {state.columnOrder.map((columnId) => {
+                                    const column = state.columns[columnId];
+                                    const tasks = column.taskIds.map((taskId) => state.tasks[taskId]);
+                                    
+                                    return <Column key={column.id} column={column} tasks={tasks} openModal={openModal}/>;
+                                })}
+                            </Container>
+                            {/* <button onClick={openModal}>modal Open</button> */}
+                            {isModalOpen && <WorkUpdate closeModal={closeModal} task={selectedTask} />}
+                            {/* {isModalOpen && <WorkAdd closeModal={closeModal} />} */}
+                        </DragDropContext>
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 };
 
