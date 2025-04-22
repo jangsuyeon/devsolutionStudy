@@ -1,9 +1,10 @@
 
 import React from 'react';
-import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
+import { Chart as ChartJS, CategoryScale, LinearScale, BarController, LineController, BarElement, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
 import { Chart } from 'react-chartjs-2';
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, PointElement, LineElement, Title, Tooltip, Legend);
+ChartJS.register(CategoryScale, LinearScale, BarController, LineController, BarElement, PointElement, LineElement, Title, Tooltip, Legend);
+
 
 const generateData = () => {
     const totalTasks = [30, 45, 25, 35, 28, 50, 48, 32, 40, 29];
