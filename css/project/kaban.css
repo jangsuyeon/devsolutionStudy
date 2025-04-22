@@ -1,0 +1,79 @@
+.container {
+    position: relative;
+    display: flex;
+    min-width: 0;
+    word-wrap: break-word;
+    justify-content: space-between;
+    padding: 0px;
+}
+
+.movable-item {
+    border-radius: 10px;
+    height: 120px;
+    width: 290px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid #d9dee3;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 6px 0 rgba(67, 89, 113, 0.12);
+    padding: 15px 10px;
+    cursor: pointer;
+}
+
+.kanban-title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    max-inline-size: 13rem;
+    white-space: nowrap;
+    margin-bottom: 10px;
+}
+
+.kanban-add-btn {
+    color: #384551;
+    font-weight: 400;
+    inset-block-end: 0;
+    inset-inline-start: -4px;
+    margin-block: -1.5rem;
+    margin-inline: 0;
+    border: none;
+    margin-top: 5px;
+    text-align: left;
+    padding-left: 0;
+    background-color: #f5f5f9;
+}
+
+.kanban-add-btn:hover {
+    transform: translateY(-1px);
+    border: none;
+}
+
+.kanban {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 280px; /* 고정된 너비 */
+    min-width: 200px; /* 최소 너비 */
+}
+
+.kanban-items {
+    overflow-y: auto; /* 세로 스크롤 */
+}
+
+.btn-label-danger {
+    color: #ff3e1d; /* 기본 글자색 */
+    background-color: color-mix(in sRGB, #fff 84%, #ff3e1d);
+    border: 1px solid color-mix(in sRGB, #fff 84%, #ff3e1d);
+    box-shadow: none;
+}
+.btn-label-danger:hover {
+    color: #fff;
+    background-color: color-mix(in sRGB, #000 15%, #ff3e1d);
+    border-color: color-mix(in sRGB, #000 15%, #ff3e1d);
+    transform: translateY(-1px);
+    box-shadow: 0 0.125rem 0.25rem 0 rgba(255, 62, 29, 0.4);
+}
+
