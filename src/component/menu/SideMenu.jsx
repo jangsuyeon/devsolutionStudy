@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import MenuItem from './MenuItem';
 import MenuItemGroup from './MenuGroup';
-import Logo from "/devsolutionStudy/public/img/logo/logoImg.png"
+import Logo from "../../../public/img/logo/logoImg.png"
 
 const SideMenu = () => {
     return (
