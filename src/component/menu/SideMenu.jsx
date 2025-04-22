@@ -6,7 +6,7 @@ const SideMenu = () => {
     return (
         <aside id="layout-menu" className="layout-menu menu-vertical menu bg-menu-theme">
             <div className="app-brand demo">
-                <a href="index.html" className="app-brand-link">
+                <a href="/" className="app-brand-link">
                     <span className="app-brand-logo demo">
                         <svg
                             width="25"

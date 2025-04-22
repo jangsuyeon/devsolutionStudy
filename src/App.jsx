@@ -18,7 +18,7 @@ function App() {
           {/* 공통 메뉴 */}
           <SideMenu />
           {/* 내용 */}
-          <Routes basename="/devsolutionStudy">
+          <Routes>
             <Route path='index/' element={<Index />} />
 
             <Route path='/project' element={<ProjectList />} />
