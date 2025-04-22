@@ -13,12 +13,28 @@ import ChatList from './chat/chatList'
 function App() {
   return (
     <>
+      <BrowserRouter basename="/devsolutionStudy">
       <div className="layout-wrapper">
         <div className="layout-container layout-content-navbar">
-          {/* 공통 메뉴 */}
           <SideMenu />
-          {/* 내용 */}
           <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="project" element={<ProjectList />} />
+            <Route path="project/add" element={<ProjectAdd />} />
+            <Route path="project/detail" element={<ProjectDetail />} />
+            <Route path="codeReview" element={<CodeReview />} />
+            <Route path="chatList" element={<ChatList />} />
+          </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
+
+      {/* <div className="layout-wrapper">
+        <div className="layout-container layout-content-navbar"> */}
+          {/* 공통 메뉴 */}
+          {/* <SideMenu /> */}
+          {/* 내용 */}
+          {/* <Routes basename="/devsolutionStudy">
             <Route path='/' element={<Index />} />
 
             <Route path='/project' element={<ProjectList />} />
@@ -29,7 +45,8 @@ function App() {
             <Route path='/project/detail' element={<ProjectDetail/>} />
           </Routes>
         </div>
-      </div>
+      </div> */}
+      
     </>
   )
 }
