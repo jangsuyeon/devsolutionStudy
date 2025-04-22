@@ -6,7 +6,7 @@ const SideMenu = () => {
     return (
         <aside id="layout-menu" className="layout-menu menu-vertical menu bg-menu-theme">
             <div className="app-brand demo">
-                <a href="/" className="app-brand-link">
+                <a href="/devsolutionStudy" className="app-brand-link">
                     <span className="app-brand-logo demo">
                         <svg
                             width="25"
@@ -81,8 +81,8 @@ const SideMenu = () => {
                     title="프로젝트 관리"
                     icon="bx-layout"
                     subMenuItems={[
-                        { title: "A 프로젝트", href: "/project" },
-                        { title: "B 프로젝트", href: "/codeReview" },
+                        { title: "A 프로젝트", href: "/devsolutionStudy/project" },
+                        { title: "B 프로젝트", href: "/devsolutionStudy/codeReview" },
                     ]}
                 />
             </ul>
