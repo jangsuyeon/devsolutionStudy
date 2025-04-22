@@ -81,8 +81,8 @@ const SideMenu = () => {
                     title="프로젝트 관리"
                     icon="bx-layout"
                     subMenuItems={[
-                        { title: "A 프로젝트", href: "/devsolutionStudy/project" },
-                        { title: "B 프로젝트", href: "/devsolutionStudy/codeReview" },
+                        { title: "프로젝트", href: "/devsolutionStudy/project" },
+                        { title: "코드리뷰", href: "/devsolutionStudy/codeReview" },
                     ]}
                 />
             </ul>
