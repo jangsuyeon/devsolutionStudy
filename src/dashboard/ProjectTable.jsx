@@ -1,4 +1,5 @@
 import React from 'react';
+import Profile1 from "../../public/img/avatars/1.png"
 
 const ProjectTable = () => {
     return (
@@ -39,7 +40,7 @@ const ProjectTable = () => {
                             <td>
                                 <div className="d-flex align-items-center">
                                     <img
-                                        src="/devsolutionStudy/public/img/avatars/1.png"
+                                        src={Profile1}
                                         alt="Avatar"
                                         className="rounded-circle me-2"
                                         style={{ width: '32px', height: '32px' }}
@@ -75,7 +76,7 @@ const ProjectTable = () => {
                             <td>
                                 <div className="d-flex align-items-center">
                                     <img
-                                        src="/devsolutionStudy/public/img/avatars/5.png"
+                                        src={Profile1}
                                         alt="Avatar"
                                         className="rounded-circle me-2"
                                         style={{ width: '32px', height: '32px' }}
@@ -111,7 +112,7 @@ const ProjectTable = () => {
                             <td>
                                 <div className="d-flex align-items-center">
                                     <img
-                                        src="/devsolutionStudy/public/img/avatars/6.png"
+                                        src={Profile1}
                                         alt="Avatar"
                                         className="rounded-circle me-2"
                                         style={{ width: '32px', height: '32px' }}
@@ -147,7 +148,7 @@ const ProjectTable = () => {
                             <td>
                                 <div className="d-flex align-items-center">
                                     <img
-                                        src="/devsolutionStudy/public/img/avatars/6.png"
+                                        src={Profile1}
                                         alt="Avatar"
                                         className="rounded-circle me-2"
                                         style={{ width: '32px', height: '32px' }}

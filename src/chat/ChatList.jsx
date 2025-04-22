@@ -9,6 +9,10 @@ import "/public/css/project/projectAdd.css"
 import "/public/css/chat/chat.css"
 import "boxicons/css/boxicons.min.css"
 
+import Profile1 from "../../public/img/avatars/1.png"
+import Profile6 from "../../public/img/avatars/6.png"
+
+
 function ChatList() {
     
     return (
@@ -59,7 +63,7 @@ function ChatList() {
                                     <li className="nav-item navbar-dropdown dropdown-user dropdown">
                                         <a className="nav-link dropdown-toggle hide-arrow" href="#" data-bs-toggle="dropdown">
                                             <div className="avatar avatar-online">
-                                            <img src="/img/avatars/1.png" alt="Avatar" className="w-px-40 h-auto rounded-circle" />
+                                            <img src={Profile1} alt="Avatar" className="w-px-40 h-auto rounded-circle" />
                                             </div>
                                         </a>
                                         <ul className="dropdown-menu dropdown-menu-end">
@@ -68,7 +72,7 @@ function ChatList() {
                                                     <div className="d-flex">
                                                     <div className="flex-shrink-0 me-3">
                                                         <div className="avatar avatar-online">
-                                                        <img src="/img/avatars/1.png" alt="Avatar" className="w-px-40 h-auto rounded-circle" />
+                                                        <img src={Profile1} alt="Avatar" className="w-px-40 h-auto rounded-circle" />
                                                         </div>
                                                     </div>
                                                     <div className="flex-grow-1">
@@ -116,7 +120,7 @@ function ChatList() {
                                                         
                                                         data-target="#app-chat-sidebar-left"
                                                     >
-                                                        <img src="/img/avatars/1.png" alt="Avatar" className="w-px-40 h-auto rounded-circle" />
+                                                        <img src={Profile1} alt="Avatar" className="w-px-40 h-auto rounded-circle" />
                                                     </div>
                                                     <div className="flex-grow-1 input-group input-group-merge rounded-pill">
                                                         <span className="input-group-text" id="basic-addon-search31">
@@ -142,7 +146,7 @@ function ChatList() {
                                                     <li className="chat-contact-list-item mb-1">
                                                         <a className="d-flex align-items-center">
                                                             <div className="flex-shrink-0 avatar asvatar-online">
-                                                                <img src="/img/avatars/1.png" alt="Avatar" className="rounded-circle"></img>
+                                                                <img src={Profile1} alt="Avatar" className="rounded-circle"></img>
                                                             </div>
                                                             <div className="chat-contact-info flex-grow-1 ms-4">
                                                                 <h6 className="chat-contact-name text-truncate m-0 fw-normal">Waldmar Mannering</h6>
@@ -154,7 +158,7 @@ function ChatList() {
                                                     <li className="chat-contact-list-item mb-1">
                                                         <a className="d-flex align-items-center">
                                                             <div className="flex-shrink-0 avatar asvatar-online">
-                                                                <img src="/img/avatars/6.png" alt="Avatar" className="rounded-circle"></img>
+                                                                <img src={Profile6} alt="Avatar" className="rounded-circle"></img>
                                                             </div>
                                                             <div className="chat-contact-info flex-grow-1 ms-4">
                                                                 <h6 className="chat-contact-name text-truncate m-0 fw-normal">Felecia Rower</h6>
@@ -216,7 +220,7 @@ function ChatList() {
                                                                 
                                                                 data-overlay data-target="#app-chat-contacts"></i>
                                                             <div className="flex-shrink-0 avatar avatar-online">
-                                                                <img src="/img/avatars/6.png" alt="Avatar" className="rounded-circle"
+                                                                <img src={Profile6} alt="Avatar" className="rounded-circle"
                                                                     
                                                                     data-overlay data-target="#app-chat-sidebar-right"></img>
                                                             </div>

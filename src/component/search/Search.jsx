@@ -1,5 +1,6 @@
 import React from 'react';
 import NotificationIcon from '../../alarm/Notification';
+import Profile1 from "../../../public/img/avatars/1.png"
 
 const Search = () => {
     return (
@@ -37,7 +38,7 @@ const Search = () => {
                         <li className="nav-item navbar-dropdown dropdown-user dropdown">
                             <a className="nav-link dropdown-toggle hide-arrow" href="#" data-bs-toggle="dropdown">
                                 <div className="avatar avatar-online">
-                                    <img src='/devsolutionStudy/public/img/avatars/1.png' alt="Avatar" className="w-px-40 h-auto rounded-circle" />
+                                    <img src={Profile1} alt="Avatar" className="w-px-40 h-auto rounded-circle" />
                                 </div>
                             </a>
                             <ul className="dropdown-menu dropdown-menu-end">
@@ -46,7 +47,7 @@ const Search = () => {
                                         <div className="d-flex">
                                             <div className="flex-shrink-0 me-3">
                                                 <div className="avatar avatar-online">
-                                                    <img src="/devsolutionStudy/public/img/avatars/1.png" alt="Avatar" className="w-px-40 h-auto rounded-circle" />
+                                                    <img src={Profile1} alt="Avatar" className="w-px-40 h-auto rounded-circle" />
                                                 </div>
                                             </div>
                                             <div className="flex-grow-1">
