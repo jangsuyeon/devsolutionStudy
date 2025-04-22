@@ -13,8 +13,27 @@
   },
   "homepage": "https://jangsuyeon.github.io/devsolutionStudy/",
   "dependencies": {
+    "@fullcalendar/daygrid": "^6.1.15",
+    "@fullcalendar/interaction": "^6.1.15",
+    "@fullcalendar/react": "^6.1.15",
+    "@fullcalendar/timegrid": "^6.1.15",
+    "@nivo/pie": "^0.88.0",
+    "apexcharts": "^4.2.0",
+    "bootstrap": "^5.3.3",
+    "boxicons": "^2.1.4",
+    "chart.js": "^4.4.7",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-beautiful-dnd": "^13.1.1",
+    "react-bootstrap": "^2.10.9",
+    "react-chartjs-2": "^5.2.0",
+    "react-codemirror2": "^8.0.0",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dom": "^18.3.1",
+    "react-modal": "^3.16.1",
+    "react-router-dom": "^7.0.2",
+    "react-select": "^5.10.1",
+    "styled-components": "^6.1.17"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
