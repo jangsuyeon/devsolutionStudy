@@ -18,15 +18,15 @@ function App() {
           {/* 공통 메뉴 */}
           <SideMenu />
           {/* 내용 */}
-          <Routes>
-            <Route path='index/' element={<Index />} />
+          <Routes basename="/devsolutionStudy">
+            <Route path='/devsolutionStudy' element={<Index />} />
 
-            <Route path='/project' element={<ProjectList />} />
-            <Route path='/project/add' element={<ProjectAdd />} />
-            <Route path='/codeReview' element={<CodeReview />} />
+            <Route path='/devsolutionStudy/project' element={<ProjectList />} />
+            <Route path='/devsolutionStudy/project/add' element={<ProjectAdd />} />
+            <Route path='/devsolutionStudy/codeReview' element={<CodeReview />} />
 
-            <Route path='/chatList' element={<ChatList />} />
-            <Route path='/project/detail' element={<ProjectDetail/>} />
+            <Route path='/devsolutionStudy/chatList' element={<ChatList />} />
+            <Route path='/devsolutionStudy/project/detail' element={<ProjectDetail/>} />
           </Routes>
         </div>
       </div>
