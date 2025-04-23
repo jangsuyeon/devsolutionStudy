@@ -5,7 +5,7 @@ import Logo from "../../../public/img/logo/logoImg.png"
 
 const SideMenu = () => {
     return (
-        <aside id="layout-menu" className="menu-vertical menu bg-menu-theme">
+        <aside id="layout-menu" className="layout-menu menu-vertical menu bg-menu-theme">
             <div className="app-brand demo">
                 <a href="/devsolutionStudy/" className="app-brand-link">
                     <span className="app-brand-logo demo">
