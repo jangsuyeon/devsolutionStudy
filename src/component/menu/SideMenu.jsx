@@ -2,6 +2,11 @@ import React, { useState } from 'react'
 import MenuItem from './MenuItem';
 import MenuItemGroup from './MenuGroup';
 import Logo from "../../../public/img/logo/logoImg.png"
+import 'boxicons'
+import 'boxicons/css/boxicons.min.css';
+
+
+
 
 const SideMenu = () => {
     // 메뉴 상태를 관리하는 useState 추가
@@ -21,7 +26,7 @@ const SideMenu = () => {
                     href="#"
                     onClick={toggleMenu} // 메뉴 토글 클릭 이벤트
                 >
-                    모바일메뉴
+                    <box-icon name='menu' color='#697a8d' size="lg"></box-icon>
                 </a>
             </div>
 
@@ -43,7 +48,9 @@ const SideMenu = () => {
                             onClick={toggleMenu} // 메뉴 토글 클릭 이벤트
                             style={{color: 'black', display: 'inline-block'}}
                         >
-                            {/* <i className="bx bx-chevron-left bx-sm align-middle"></i> */}닫기
+                            {/* <i className="bx bx-chevron-left bx-sm align-middle"></i> */}
+                            <box-icon name='x' color='#fff'></box-icon>
+
                         </a>
                     </div>
                     <div className="menu-inner-shadow"></div>

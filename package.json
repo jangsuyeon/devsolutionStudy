@@ -25,6 +25,7 @@
     "react": "^18.3.1",
     "react-beautiful-dnd": "^13.1.1",
     "react-bootstrap": "^2.10.9",
+    "react-boxicons": "^0.0.28",
     "react-chartjs-2": "^5.2.0",
     "react-codemirror2": "^8.0.0",
     "react-dnd": "^16.0.1",
